@@ -7,18 +7,18 @@ spec:
     - apiVersion: tekton.dev/v1beta1
       kind: PipelineRun
       metadata:
-        generateName: fred-william-node-express-pipelinerun-
+        generateName: fred-william-nextjs-app-pipelinerun-
       spec:
         serviceAccountName: quay-bot
         params:
           - name: github-repo
             value: https://github.com/cloud-native-garage-method-cohort/fred-william-tekton-e2e-assignment
           - name: image-repo
-            value: quay.io/faklamanu/fred-william-nextjs
+            value: quay.io/faklamanu/fred-william-nextjs-app
           - name: app-name
-            value: fred-william-nodejs-app
+            value: fred-william-nextjs-app
         pipelineRef:
-          name: fred-william-nodejs-app
+          name: fred-william-nextjs-app
         workspaces:
         - name: pipeline-shared-data
           volumeClaimTemplate:
