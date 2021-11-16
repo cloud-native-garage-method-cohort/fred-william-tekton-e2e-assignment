@@ -6,7 +6,7 @@ spec:
   serviceAccountName: quay-bot
   params:
     - name: github-repo
-      value: https://github.com/cloud-native-garage-method-cohort/fred-william-tekton-e2e-assignment
+      value: https://github.com/cloud-native-garage-method-cohort/fred-william-tekton-e2e-assignment/
     - name: image-repo
       value: quay.io/faklamanu/fred-william-nextjs-app
     - name: app-name
