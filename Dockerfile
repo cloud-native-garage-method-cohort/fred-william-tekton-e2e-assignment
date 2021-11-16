@@ -5,9 +5,9 @@ WORKDIR /usr/app
 
 RUN chown -R node:node /usr/app/
 
-RUN npm ci
+RUN npm install
 
-COPY . .
+COPY . ./
 
 EXPOSE 3000
 
