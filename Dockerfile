@@ -5,12 +5,14 @@ WORKDIR /usr/app
 
 RUN chown -R node:node /usr/app/
 
-RUN npm install
+COPY package*.json ./
 
-COPY . ./
+RUN npm ci
+
+COPY . .
 
 EXPOSE 3000
 
-USER node
+USER  node
 
 CMD ["npm", "run", "dev"]
