@@ -3,13 +3,15 @@ FROM node:16-alpine
 
 WORKDIR /usr/app
 
-RUN chown -R node:node /usr/app/
+RUN npm config set unsafe-perm true
 
 COPY package*.json ./
 
 RUN npm ci
 
 COPY . .
+
+RUN chown -R node:node /usr/app/
 
 EXPOSE 3000
 
