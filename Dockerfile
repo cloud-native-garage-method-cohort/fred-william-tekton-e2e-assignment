@@ -1,4 +1,5 @@
-FROM quay.io/ibmgaragecloud/node:lts-stretch
+#FROM quay.io/ibmgaragecloud/node:lts-stretch
+FROM node:16-alpine
 
 RUN mkdir -p /usr/src/app
 
