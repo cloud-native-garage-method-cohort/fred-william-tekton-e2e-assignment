@@ -1,20 +1,15 @@
-#FROM quay.io/ibmgaragecloud/node:lts-stretch
-FROM node:16-alpine
+FROM quay.io/ibmgaragecloud/node:lts-stretch
 
-WORKDIR /usr/app
-
-RUN npm config set unsafe-perm true
+WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci
+RUN npm install
 
-COPY . .
+COPY . . 
 
-RUN chown -R $USER:$USER /usr/app/
+RUN npm run build 
 
 EXPOSE 3000
-
-USER  node
 
 CMD ["npm", "run", "dev"]
