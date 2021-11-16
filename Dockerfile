@@ -3,7 +3,7 @@ FROM node:16-alpine
 
 WORKDIR /usr/app
 
-RUN chown -Rh $user:$user /usr/app
+RUN chown -R node.node /usr/app
 
 COPY package*.json ./
 
