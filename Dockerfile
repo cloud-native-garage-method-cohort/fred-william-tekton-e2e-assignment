@@ -1,15 +1,15 @@
 #FROM quay.io/ibmgaragecloud/node:lts-stretch
 FROM node:16-alpine
 
-RUN mkdir -p /usr/src/app
+WORKDIR /usr/app
 
-WORKDIR /usr/src/app
+RUN chown -Rh $user:$user /usr/app
 
 COPY package*.json ./
 
 RUN npm ci
 
-COPY . .
+COPY . ./
 
 EXPOSE 3000
 
