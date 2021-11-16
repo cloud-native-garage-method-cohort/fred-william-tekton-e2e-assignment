@@ -4,7 +4,7 @@ kind: Kustomization
 images:
 - name: quay.io/upslopeio/express-sample-app
   newName: quay.io/faklamanu/fred-william-nextjs-app
-  newTag: d0995025ca79fcd10f7523e112990c6438997c06
+  newTag: 1c460037958334d8ba82fdb8596b0d5364c700c1
 
 resources:
 - deployment.yaml
