@@ -11,9 +11,7 @@ RUN npm ci
 
 COPY . .
 
-RUN chown -R node:node /usr/app/
-RUN mkdir -p /usr/app/.next
-RUN chown -R node:node /usr/app/.next
+RUN chown -R $USER:$USER /usr/app/
 
 EXPOSE 3000
 
