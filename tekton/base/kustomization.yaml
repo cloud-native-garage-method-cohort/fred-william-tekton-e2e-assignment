@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- git-credentials.Secret.yaml
+- production-repository.ConfigMap.yaml
+- TriggerBinding.yaml
+- TriggerTemplate.yaml
+- buildah.pipeline.yaml
+- quay.ServiceAccount.yaml
+- save-configuration.Task.yaml
+- webhook-receiver.EventListener.yaml
+- webhook-receiver.Role.yaml
+- webhook-receiver.RoleBinding.yaml
+- webhook-receiver.Route.yaml
+- webhook-receiver.ServiceAccount.yaml

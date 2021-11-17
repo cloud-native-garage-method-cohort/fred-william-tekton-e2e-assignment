@@ -32,3 +32,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
+tekton/base/git-credentials.Secret.yaml
+tekton/faklamanu-quayio-secret.yaml
+tekton/base/production-repository.ConfigMap.yaml
