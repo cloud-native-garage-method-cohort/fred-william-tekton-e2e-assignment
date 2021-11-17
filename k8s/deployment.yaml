@@ -5,7 +5,7 @@ metadata:
     app.openshift.io/runtime: js
   name: fred-william-nextjs-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/instance: app-instance
